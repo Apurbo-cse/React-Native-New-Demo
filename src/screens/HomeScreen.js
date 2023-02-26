@@ -9,6 +9,7 @@ import {PLACES, TOP_PLACES} from '../data';
 import {colors} from '../constants/theme';
 import HomeCard from '../components/common/HomeCard';
 import imagePath from '../constants/imagePath';
+import MainNavigationString from '../navigations/MainNavigationString';
 
 const HomeScreen = () => {
   return (
@@ -33,7 +34,7 @@ const HomeScreen = () => {
             top: -100,
           }}>
           <HomeCard
-            action={'liveChat'}
+            action={MainNavigationString.LIVECHAT}
             icon={imagePath.iconLiveChat}
             title={'Live Chat'}
           />

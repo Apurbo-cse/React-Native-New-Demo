@@ -6,10 +6,7 @@ import TabNavigator from './TabNavigator';
 import {createSharedElementStackNavigator} from 'react-navigation-shared-element';
 import TripDetailsScreen from '../screens/TripDetailsScreen';
 import LivechatScreen from '../screens/live_chat/LivechatScreen';
-
-
-
-
+import MainNavigationString from './MainNavigationString';
 // const Stack = createStackNavigator();
 
 const Stack = createSharedElementStackNavigator();
@@ -29,7 +26,7 @@ const MainNavigator = () => {
         />
 
         <Stack.Screen
-          name="liveChat"
+          name={MainNavigationString.LIVECHAT}
           component={LivechatScreen}
           options={{
             headerShown: false,
