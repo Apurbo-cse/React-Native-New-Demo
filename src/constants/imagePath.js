@@ -1,5 +1,6 @@
 export default {
   logo: require('../../assets/icons/logo.png'),
+  leftBack: require('../../assets/icons/Arrow_Left.png'),
 
   deshbordTob: require('../../assets/icons/yellow-bg-2.png'),
   cardBbOne: require('../../assets/icons/card-bg-1.png'),
@@ -22,7 +23,6 @@ export default {
   iconRocket: require('../../assets/icons/rocket.png'),
   iconCalender: require('../../assets/icons/calender.png'),
 
-
   iconAll: require('../../assets/icons/option/all.png'),
   iconApproved: require('../../assets/icons/option/approved.png'),
   iconChatList: require('../../assets/icons/option/chat-list.png'),
@@ -33,5 +33,4 @@ export default {
   iconReject: require('../../assets/icons/option/reject.png'),
   iconResult: require('../../assets/icons/option/rejult.png'),
   iconProfileDefult: require('../../assets/icons/option/profile_1.png'),
-
 };

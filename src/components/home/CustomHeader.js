@@ -16,7 +16,7 @@ const CustomHeader = ({backFunc, title, tns = null}) => {
               {/* <Ionicons name="arrow-left" size={24} color={colors.Background} /> */}
             </View>
             <View style={{justifyContent: 'center'}}>
-              <Text style={{ fontSize: 16, color: 'white' }}>Back</Text>
+              <Text style={{ fontSize: 16, color: 'white' }}>{"Back"}</Text>
             </View>
           </TouchableOpacity>
         ) : (

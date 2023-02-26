@@ -1,14 +1,13 @@
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
-import {Image, View, StyleSheet, TouchableOpacity, Text} from 'react-native';
-import {colors, shadow, sizes, spacing} from '../constants/theme';
-import FavoriteButton from './FavoriteButton';
+import {colors, shadow, sizes, spacing} from '../../constants/theme';
+
 import {useNavigation} from '@react-navigation/native';
 import {SharedElement} from 'react-navigation-shared-element';
-
 const CARD_WIDTH = sizes.width / 2 - (spacing.l + spacing.l / 2);
-const CARD_HEIGHT = 220;
+const CARD_HEIGHT = 150;
 
-const TripsList = ({list}) => {
+const CardPost = ({list, action, payload}) => {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
@@ -16,11 +15,11 @@ const TripsList = ({list}) => {
         return (
           <TouchableOpacity
             style={styles.cardContainer}
-            key={item.id}
-            onPress={() => {
-              navigation.navigate('TripDetails', {trip: item});
-            }}
-            >
+            onPress={
+              payload
+                ? () => navigation.navigate(action, payload)
+                : () => navigation.navigate(action)
+            }>
             <View style={[styles.card, shadow.light]}>
               <SharedElement id={`trip.${item.id}.image`}>
                 <View style={styles.imageBox}>
@@ -32,7 +31,6 @@ const TripsList = ({list}) => {
                   <Text style={styles.title}>{item.title}</Text>
                   <Text style={styles.location}>{item.location}</Text>
                 </View>
-                <FavoriteButton />
               </View>
             </View>
           </TouchableOpacity>
@@ -42,10 +40,13 @@ const TripsList = ({list}) => {
   );
 };
 
+export default CardPost;
+
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     flexWrap: 'wrap',
+    backgroundColor: colors.Background,
   },
   cardContainer: {
     marginLeft: spacing.l,
@@ -53,7 +54,7 @@ const styles = StyleSheet.create({
   },
   card: {
     width: CARD_WIDTH,
-    height: CARD_HEIGHT,
+    // height: CARD_HEIGHT,
     backgroundColor: colors.white,
     borderRadius: sizes.radius,
   },
@@ -72,15 +73,16 @@ const styles = StyleSheet.create({
   footer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 6,
-    marginLeft: 16,
+    marginTop: 4,
+    marginLeft: 10,
     marginRight: 10,
+    paddingBottom: 6,
   },
   titleBox: {
     flex: 1,
   },
   title: {
-    marginVertical: 4,
+    // marginVertical: 4,
     fontSize: sizes.body,
     fontWeight: 'bold',
     color: colors.primary,
@@ -90,5 +92,3 @@ const styles = StyleSheet.create({
     color: colors.lightGray,
   },
 });
-
-export default TripsList;

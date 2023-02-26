@@ -7,9 +7,11 @@ import {useNavigation} from '@react-navigation/native';
 import TopMenuHeader from '../../components/TopMenuHeader';
 import imagePath from '../../constants/imagePath';
 import OptionCard from '../../components/common/OptionCard';
+import MainNavigationString from '../../navigations/MainNavigationString';
 
 const LivechatScreen = () => {
   const Navigation = useNavigation();
+
   return (
     <SafeAreaView>
       <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
@@ -19,7 +21,7 @@ const LivechatScreen = () => {
           <View style={styles.animation_view}>
             <Text style={styles.title}>Live Chat</Text>
             <OptionCard
-              // action={MainNavigationString.CREATEFORM}
+              action={MainNavigationString.LIVECHATCREATE}
               // payload={{
               //   typeName: 'LiveChatCreate',
               // }}
@@ -38,7 +40,11 @@ const LivechatScreen = () => {
               title={'Recject'}
               cout={10}
             />
-            <OptionCard icon={imagePath.iconAll} title={'All'} />
+            <OptionCard
+              icon={imagePath.iconAll}
+              title={'All'}
+              action={MainNavigationString.LIVECHATALL}
+            />
           </View>
         </Animatable.View>
       </ScrollView>

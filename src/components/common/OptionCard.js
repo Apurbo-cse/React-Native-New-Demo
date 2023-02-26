@@ -14,12 +14,7 @@ import imagePath from '../../constants/imagePath';
 const OptionCard = ({icon, title, color, action, payload = null, cout = 0}) => {
   const navigation = useNavigation();
   return (
-    <TouchableOpacity
-      onPress={
-        payload
-          ? () => navigation.navigate(action, payload)
-          : () => navigation.navigate(action)
-      }>
+    <TouchableOpacity onPress={() => navigation.navigate(action)}>
       <ImageBackground
         source={color != 'redis' ? imagePath.cardBbOne : imagePath.cardBbTwo}
         resizeMode="cover"

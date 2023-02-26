@@ -5,14 +5,14 @@ import Icon from '../components/Icon';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {SharedElement} from 'react-navigation-shared-element';
 import TripDetailsCard from '../components/TripDetailsCard';
-
+import * as Animatable from 'react-native-animatable';
 
 const TripDetailsScreen = ({navigation, route}) => {
   const insets = useSafeAreaInsets();
   const {trip} = route.params;
   return (
     <View style={styles.container}>
-      <View
+      <Animatable.View
         style={[styles.backButton, {marginTop: insets.top}]}
         animation="fadeIn"
         delay={500}
@@ -23,7 +23,7 @@ const TripDetailsScreen = ({navigation, route}) => {
           style={styles.backIcon}
           onPress={navigation.goBack}
         />
-      </View>
+      </Animatable.View>
       <SharedElement
         id={`trip.${trip.id}.image`}
         style={StyleSheet.absoluteFillObject}>

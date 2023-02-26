@@ -1,11 +1,6 @@
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet, View} from 'react-native';
 import React from 'react';
 import MainHeader from '../components/MainHeader';
-import ScreenHeader from '../components/ScreenHeader';
-import TopPlacesCarousel from '../components/TopPlacesCarousel';
-import SectionHeader from '../components/SectionHeader';
-import TripsList from '../components/TripsList';
-import {PLACES, TOP_PLACES} from '../data';
 import {colors} from '../constants/theme';
 import HomeCard from '../components/common/HomeCard';
 import imagePath from '../constants/imagePath';
@@ -46,17 +41,6 @@ const HomeScreen = () => {
           />
         </View>
       </View>
-
-      <ScreenHeader mainTitle="Find Your" secondTitle="Dream Trip" />
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <TopPlacesCarousel list={TOP_PLACES} />
-        <SectionHeader
-          title="Popular Trips"
-          buttonTitle="See All"
-          onPress={() => {}}
-        />
-        <TripsList list={PLACES} />
-      </ScrollView>
     </ScrollView>
   );
 };
