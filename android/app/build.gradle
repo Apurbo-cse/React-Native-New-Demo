@@ -93,9 +93,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.native_app_demo"
+    namespace "com.tabnavigation"
     defaultConfig {
-        applicationId "com.native_app_demo"
+        applicationId "com.tabnavigation"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
