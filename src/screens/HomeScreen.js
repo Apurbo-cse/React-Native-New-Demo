@@ -10,7 +10,15 @@ import {colors} from '../constants/theme';
 
 const HomeScreen = () => {
   return (
-    <View style={styles.container}>
+    <ScrollView
+      style={[
+        styles.container,
+        // eslint-disable-next-line react-native/no-inline-styles
+        {
+          flexDirection: 'column',
+          height: 200,
+        },
+      ]}>
       <MainHeader title="Travel App" />
       <ScreenHeader mainTitle="Find Your" secondTitle="Dream Trip" />
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -22,14 +30,32 @@ const HomeScreen = () => {
         />
         <TripsList list={PLACES} />
       </ScrollView>
-    </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: colors.light,
+    // flex: 1,
+    height: 400,
+    margin: 0,
+    padding: 0,
+    backgroundColor: colors.Background,
+  },
+  card: {
+    height: 120,
+    width: '45%',
+    backgroundColor: 'red',
+    borderRadius: 10,
+  },
+  topHader: {
+    height: 300,
+    width: '100%',
+    margin: 0,
+    padding: 0,
+    backgroundColor: colors.Background,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 

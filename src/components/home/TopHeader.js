@@ -1,19 +1,17 @@
 import React from 'react';
 import {
+  StyleSheet,
   Text,
   View,
-  StyleSheet,
   ImageBackground,
-  Image,
   TouchableOpacity,
+  Image,
 } from 'react-native';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import Icon from './Icon';
-import {colors, sizes, spacing} from '../constants/theme';
-import imagePath from '../constants/imagePath';
 
-const MainHeader = ({title}) => {
-  const insets = useSafeAreaInsets();
+import imagePath from '../../constants/imagePath';
+import {colors} from '../../constants/theme';
+
+const TopHeader = () => {
   return (
     <ImageBackground
       source={imagePath.deshbordTob}
@@ -32,7 +30,7 @@ const MainHeader = ({title}) => {
           </View>
           {/* user information */}
           <View style={styles.userInfo}>
-            <Text style={styles.starName}>Apurbo Roy</Text>
+            <Text style={styles.starName}>Sarwar Jahan Shohan</Text>
             <Text style={{color: colors.whiteText}}>Super Star</Text>
             <View style={{flexDirection: 'row', paddingTop: 8}}>
               <TouchableOpacity>
@@ -71,7 +69,7 @@ const MainHeader = ({title}) => {
             <ImageBackground
               source={imagePath.inconGoldCoin}
               style={styles.coin}>
-              <Text style={styles.symbol}>$</Text>
+              <Text style={styles.symbol}>৳</Text>
             </ImageBackground>
           </View>
         </View>
@@ -79,6 +77,8 @@ const MainHeader = ({title}) => {
     </ImageBackground>
   );
 };
+
+export default TopHeader;
 
 const styles = StyleSheet.create({
   container: {
@@ -163,5 +163,3 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
 });
-
-export default MainHeader;
