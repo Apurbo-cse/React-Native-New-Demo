@@ -19,7 +19,14 @@ const HomeScreen = () => {
           height: 200,
         },
       ]}>
-      <MainHeader title="Travel App" />
+      <MainHeader />
+
+      <View style={{ height: 700, backgroundColor: colors.Background }} >
+
+      <View style={{ flexDirection: "row", justifyContent: 'space-around', flexWrap: 'wrap', top: -100 }}>
+      </View>
+    </View>    
+
       <ScreenHeader mainTitle="Find Your" secondTitle="Dream Trip" />
       <ScrollView showsVerticalScrollIndicator={false}>
         <TopPlacesCarousel list={TOP_PLACES} />

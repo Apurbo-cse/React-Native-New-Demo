@@ -7,13 +7,10 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import Icon from './Icon';
-import {colors, sizes, spacing} from '../constants/theme';
+import {colors} from '../constants/theme';
 import imagePath from '../constants/imagePath';
 
-const MainHeader = ({title}) => {
-  const insets = useSafeAreaInsets();
+const MainHeader = () => {
   return (
     <ImageBackground
       source={imagePath.deshbordTob}
