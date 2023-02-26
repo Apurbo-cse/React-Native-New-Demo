@@ -1,18 +1,18 @@
 /* eslint-disable react/no-unstable-nested-components */
 import {StyleSheet, Animated} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-// import HomeScreen from '../screens/HomeScreen';
 import NotificationScreen from '../screens/NotificationScreen';
 import MenuScreen from '../screens/MenuScreen';
 import Icon from '../components/Icon';
 import {colors, sizes} from '../constants/theme';
 import React from 'react';
-import HomeNavigator from './HomeNavigator';
+// import HomeNavigator from './HomeNavigator';
+import HomeStack from './stack/HomeStack';
 
 const tabs = [
   {
     name: 'Home',
-    screen: HomeNavigator,
+    screen: HomeStack,
   },
   {
     name: 'Search',

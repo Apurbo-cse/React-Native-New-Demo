@@ -7,6 +7,8 @@ import SectionHeader from '../components/SectionHeader';
 import TripsList from '../components/TripsList';
 import {PLACES, TOP_PLACES} from '../data';
 import {colors} from '../constants/theme';
+import HomeCard from '../components/common/HomeCard';
+import imagePath from '../constants/imagePath';
 
 const HomeScreen = () => {
   return (
@@ -21,11 +23,22 @@ const HomeScreen = () => {
       ]}>
       <MainHeader />
 
-      <View style={{ height: 700, backgroundColor: colors.Background }} >
-
-      <View style={{ flexDirection: "row", justifyContent: 'space-around', flexWrap: 'wrap', top: -100 }}>
+      <View style={{height: 700, backgroundColor: colors.Background}}>
+        <View
+          // eslint-disable-next-line react-native/no-inline-styles
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-around',
+            flexWrap: 'wrap',
+            top: -100,
+          }}>
+          <HomeCard
+            action={'liveChat'}
+            icon={imagePath.iconLiveChat}
+            title={'Live Chat'}
+          />
+        </View>
       </View>
-    </View>    
 
       <ScreenHeader mainTitle="Find Your" secondTitle="Dream Trip" />
       <ScrollView showsVerticalScrollIndicator={false}>

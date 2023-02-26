@@ -3,8 +3,12 @@ import {NavigationContainer} from '@react-navigation/native';
 // import {StatusBar} from 'react-native/types';
 // import {createStackNavigator} from '@react-navigation/stack';
 import TabNavigator from './TabNavigator';
-import { createSharedElementStackNavigator } from 'react-navigation-shared-element';
+import {createSharedElementStackNavigator} from 'react-navigation-shared-element';
 import TripDetailsScreen from '../screens/TripDetailsScreen';
+import LivechatScreen from '../screens/live_chat/LivechatScreen';
+
+
+
 
 // const Stack = createStackNavigator();
 
@@ -15,7 +19,7 @@ const MainNavigator = () => {
     <NavigationContainer>
       {/* <StatusBar hidden /> */}
       <Stack.Navigator>
-      <Stack.Screen
+        <Stack.Screen
           name="Root"
           component={TabNavigator}
           options={{
@@ -23,6 +27,16 @@ const MainNavigator = () => {
             useNativeDriver: true,
           }}
         />
+
+        <Stack.Screen
+          name="liveChat"
+          component={LivechatScreen}
+          options={{
+            headerShown: false,
+            useNativeDriver: true,
+          }}
+        />
+
         <Stack.Screen
           name="TripDetails"
           component={TripDetailsScreen}
