@@ -22,4 +22,16 @@ export default {
   iconRocket: require('../../assets/icons/rocket.png'),
   iconCalender: require('../../assets/icons/calender.png'),
 
+
+  iconAll: require('../../assets/icons/option/all.png'),
+  iconApproved: require('../../assets/icons/option/approved.png'),
+  iconChatList: require('../../assets/icons/option/chat-list.png'),
+  iconComoleted: require('../../assets/icons/option/completed.png'),
+  iconCreate: require('../../assets/icons/option/create.png'),
+  iconEvaluation: require('../../assets/icons/option/evalution.png'),
+  iconPending: require('../../assets/icons/option/pending.png'),
+  iconReject: require('../../assets/icons/option/reject.png'),
+  iconResult: require('../../assets/icons/option/rejult.png'),
+  iconProfileDefult: require('../../assets/icons/option/profile_1.png'),
+
 };
