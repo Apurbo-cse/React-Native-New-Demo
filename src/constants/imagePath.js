@@ -1,5 +1,5 @@
 export default {
-  // logo: require('../../assets/icons/logo.png'),
+  logo: require('../../assets/icons/logo.png'),
 
   deshbordTob: require('../../assets/icons/yellow-bg-2.png'),
   cardBbOne: require('../../assets/icons/card-bg-1.png'),
@@ -18,4 +18,8 @@ export default {
   iconFangroup: require('../../assets/icons/fan-group.png'),
   iconPaidPost: require('../../assets/icons/paidpost.png'),
   iconAudition: require('../../assets/icons/audition2.png'),
+
+  iconRocket: require('../../assets/icons/rocket.png'),
+  iconCalender: require('../../assets/icons/calender.png'),
+
 };

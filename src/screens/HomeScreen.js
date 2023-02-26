@@ -38,6 +38,12 @@ const HomeScreen = () => {
             icon={imagePath.iconLiveChat}
             title={'Live Chat'}
           />
+          <HomeCard
+            action={MainNavigationString.LIVECHAT}
+            icon={imagePath.iconQna}
+            title={'Question & answer'}
+            color={'redis'}
+          />
         </View>
       </View>
 
